@@ -16,7 +16,7 @@ placesVisted.prototype.places = function() {
 $(document).ready(function(){
   $("#places").submit(function(event){
     event.preventDefault();
-debugger
+
     var location = $("#location").val();
     var landmarks = $("#landmarks").val();
     var season = $("#season").val();
@@ -28,16 +28,16 @@ debugger
     $("ul#addingPlaces").append("<li><span class='place'>" + newPlace.location + "</span></li>");
 
 
-
+debugger
     $(".place").last().click(function() {
       $("#showPlace").show();
       $("#showPlace h2").text(newPlace.location);
       $(".location").text(newPlace.location);
       $(".landmarks").text(newPlace.landmarks);
-      $(".seaon").text(newPlace.season);
+      $(".season").text(newPlace.season);
       $(".food").text(newPlace.food);
       $(".transportation").text(newPlace.transportation);
-     $("ul#addingPlaces").append("<li><span class='place'>" + newPlace.place + "</span></li>");
+    //  $("ul#addingPlaces").append("<li><span class='place'>" + newPlace.place + "</span></li>");
     });
 
     $("input#location").val("");
